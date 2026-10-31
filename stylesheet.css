@@ -75,18 +75,18 @@ a:hover {
 }
 
 body,
-td,
-th,
-tr,
 p,
-a {
+a,
+strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+body {
+  margin: 0;
+  color: #000;
+  background: #fff;
+  line-height: 1.45;
 }
 
 h2 {
@@ -107,29 +107,64 @@ h2 {
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+/* ----- Layout ----- */
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.intro,
+section {
+  padding: 20px;
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.intro {
+  padding-bottom: 0;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+.links {
+  text-align: center;
+}
+
+.paper {
+  margin-top: 20px;
+}
+
+.paper p {
+  margin: 6px 0 0 0;
+}
+
+/* Education / experience rows: description on the left, dates on the right
+   (dates drop below the description on narrow screens). */
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 16px;
+  margin-top: 14px;
+}
+
+.entry .what {
+  flex: 1 1 420px;
+}
+
+.entry .when {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  color: #555;
+}
+
+footer {
+  padding: 0 20px 20px 20px;
+}
+
+footer p,
+footer a {
+  text-align: right;
+  font-size: small;
 }
