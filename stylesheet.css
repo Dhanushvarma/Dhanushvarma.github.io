@@ -131,6 +131,14 @@ section {
   text-align: center;
 }
 
+/* Small institution logos shown just before a name in the bio. */
+.inline-logo {
+  height: 1.6em;
+  width: auto;
+  vertical-align: -0.45em;
+  margin-right: 0.25em;
+}
+
 /* Publications: picture on the left, text on the right
    (the picture moves above the text on narrow screens). */
 .paper {
