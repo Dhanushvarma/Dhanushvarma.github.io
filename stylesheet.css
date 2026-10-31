@@ -131,12 +131,47 @@ section {
   text-align: center;
 }
 
+/* Publications: picture on the left, text on the right
+   (the picture moves above the text on narrow screens). */
 .paper {
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.paper .thumb {
+  flex: 0 0 220px;
+}
+
+.paper .thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.paper .info {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .paper p {
   margin: 6px 0 0 0;
+}
+
+@media (max-width: 600px) {
+  .paper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .paper .thumb {
+    flex: none;
+    width: 100%;
+    max-width: 360px;
+  }
 }
 
 /* Education / experience rows: description on the left, dates on the right
